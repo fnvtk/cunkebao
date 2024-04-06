@@ -1,0 +1,111 @@
+{
+	"pages": [{
+			"path": "pages/poster/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enableShareAppMessage": true
+			}
+		},
+		{
+			"path": "pages/about/about",
+			"style": {
+				"navigationBarTitleText": "",
+				"enableShareAppMessage": true
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/ucenter/ucenter",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/form/input",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/form/list",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	// "tabBar": {
+	// 	"color": "#7A7E83",
+	// 	"selectedColor": "#007AFF",
+	// 	"borderStyle": "black",
+	// 	"backgroundColor": "#FFFFFF",
+	// 	"list": [{
+	// 		"pagePath": "pages/home/home",
+	// 		"iconPath": "static/tabbar/list.png",
+	// 		"selectedIconPath": "static/tabbar/list_active.png",
+	// 		"text": "主页"
+	// 	}, {
+	// 		"pagePath": "pages/ucenter/ucenter",
+	// 		"iconPath": "static/tabbar/me.png",
+	// 		"selectedIconPath": "static/tabbar/me_active.png",
+	// 		"text": "我的"
+	// 	}]
+	// },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 1, //当前激活的模式(list 的索引项)
+		"list": [{
+				"name": "首页", //模式名称
+				"path": "pages/home/home", //启动页面，必选
+				"query": "id=xxx&name=xxx" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "旧版海报页", //模式名称
+				"path": "pages/about/about", //启动页面，必选
+				"query": "taskId=491" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "新版海报页", //模式名称
+				"path": "pages/poster/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "登录页", //模式名称
+				"path": "pages/login/login", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "我的", //模式名称
+				"path": "pages/ucenter/ucenter", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "表单", //模式名称
+				"path": "pages/form/input", //启动页面，必选
+				"query": "id=505" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
