@@ -1,0 +1,2 @@
+<view style="padding-top:50%;text-align:center;"><text style="font-size:40rpx;line-height:60rpx;">点击绑定按钮
+	成为管理员</text><button style="width:80%;margin:100rpx auto 0;background:#409eff;color:#fff;" open-type="getPhoneNumber" data-event-opts="{{[['getphonenumber',[['binding',['$event']]]]]}}" bindgetphonenumber="__e">立即绑定</button></view>

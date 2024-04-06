@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.myerm.objectbuilder.mapper.SysFieldMapper">
+    <!-- 开启二级缓存 -->
+    <cache eviction="LRU" flushInterval="100000" readOnly="true" size="1024">
+    </cache>
+    <insert id="newSave" useGeneratedKeys="true" keyProperty="lID" parameterType="cn.myerm.objectbuilder.entity.SysField">
+        INSERT
+        INTO
+            SysField
+        (sName,
+         sObjectName,
+         sFieldAs,
+         sTip,
+         bPrimaryKey,
+         sPrimartKeyType,
+         sDataType,
+         sUIType,
+         RefSysFieldId,
+         sRefFieldAs,
+         sRefKey,
+         sRefIdFieldAs,
+         sRefNameFieldAs,
+         sEnumOption,
+         bSumField,
+         lLength,
+         lDeciLength,
+         bRequired,
+         bEnableRTE,
+         bMulti,
+         sDefaultValue,
+         sParamJson,
+         bReadOnly,
+         bDisabled)
+        VALUES
+        (#{sName},
+         #{sObjectName},
+         #{sFieldAs},
+         #{sTip},
+         #{bPrimaryKey},
+         #{sPrimartKeyType},
+         #{sDataType},
+         #{sUIType},
+         #{RefSysFieldId},
+         #{sRefFieldAs},
+         #{sRefKey},
+         #{sRefIdFieldAs},
+         #{sRefNameFieldAs},
+         #{sEnumOption},
+         #{bSumField},
+         #{lLength},
+         #{lDeciLength},
+         #{bRequired},
+         #{bEnableRTE},
+         #{bMulti},
+         #{sDefaultValue},
+         #{sParamJson},
+         #{bReadOnly},
+         #{bDisabled})
+    </insert>
+    <resultMap id="resultGetById" type="cn.myerm.objectbuilder.entity.SysField">
+        <result property="RefSysFieldId" column="RefSysFieldId"/>
+        <association property="referenceField"
+                     select="cn.myerm.objectbuilder.mapper.SysFieldMapper.selectById"
+                     column="RefSysFieldId" fetchType="lazy">
+        </association>
+    </resultMap>
+    <select id="getFieldById" parameterType="int" resultMap="resultGetById">
+        select * from SysField where lID=#{id}
+    </select>
+</mapper>

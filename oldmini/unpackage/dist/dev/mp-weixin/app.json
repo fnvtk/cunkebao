@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/about/about",
+    "pages/setting/setting",
+    "pages/binding/binding"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {}
+}

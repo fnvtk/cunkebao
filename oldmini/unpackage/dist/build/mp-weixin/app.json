@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/about/about"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {}
+}

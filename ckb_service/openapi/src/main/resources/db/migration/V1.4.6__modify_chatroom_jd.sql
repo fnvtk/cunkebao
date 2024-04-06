@@ -1,0 +1,1 @@
+ALTER TABLE cunkebao.`MaterialPushChatroomTask` ADD JdPromotionSiteId bigint (11) AFTER PushWechatroomIds;

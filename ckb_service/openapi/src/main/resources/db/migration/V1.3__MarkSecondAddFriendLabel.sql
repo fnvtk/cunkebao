@@ -1,0 +1,2 @@
+UPDATE `cunkebao`.`EventTrigger` SET `sName` = '申请添加好友', `jEventHandler` = '[\r\n    {\r\n        \"id\": \"UpdateFriendRequestTaskStatus\",\r\n        \"name\": \"更新加友计划状态\"\r\n    },\r\n    {\r\n        \"id\": \"MarkFriendLabel\",\r\n        \"name\": \"打上好友标签\"\r\n    }\r\n]' WHERE `sId` = 'friendreqtask-addfriend-send';
+INSERT INTO `cunkebao`.`EventTrigger`(`sId`, `sName`, `jEventHandler`) VALUES ('friendreqtask-addfriend-isfriend', '再次添加好友', '[\r\n    {\r\n        \"id\": \"MarkFriendLabel\",\r\n        \"name\": \"打上好友标签\"\r\n    }\r\n]');

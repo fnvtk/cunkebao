@@ -1,0 +1,1 @@
+ALTER TABLE `WeChatFriendLabelLib` ADD `bUnique` TINYINT(1) NOT NULL DEFAULT 1 COMMENT '是否唯一，1表示唯一，0表示非唯一（对于枚举型标签，0表示可以多选）';
